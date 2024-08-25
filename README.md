@@ -1,5 +1,5 @@
 # Enigma 2.0
-Updated version of my previous Encryption-Decryption program. With an improved GUI and special mode! Also written by someone with 2 more years of programming experience, and hopefully the code and GUI reflect that.
+Updated version of my previous Encryption-Decryption program. With an improved GUI and special mode! Also written by someone with 2 more years of programming experience, and hopefully the code and GUI reflects that.
 
 ## Contents
 1. [Set Up](#set-up)
