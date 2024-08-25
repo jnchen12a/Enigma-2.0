@@ -304,7 +304,10 @@ class Machine():
                     return False
         # all characters should be p, o, or e
         else:
-            acceptable = set(['p', 'o', 'e'])
+            if 'o' in phrase:
+                acceptable = set(['p', 'o'])
+            else:
+                acceptable = set(['p', 'e'])
             for c in phrase.lower():
                 if c not in acceptable:
                     return False
