@@ -154,7 +154,7 @@ class Ui_Form(object):
             self.showCriticalDialogue("The input cyphertext is not valid and cannot be decoded. It may have been tampered with.")
             return
         except CharNotSupported as e:
-            self.showCriticalDialogue(f'Sorry, {e} is not a supported character.')
+            self.showCriticalDialogue(f'Sorry, {e} is not a supported character, but it shows up in the resulting plaintext. This most likely means the input cyphertext has been tampered with.')
             return
         self.outputTextBox.setText(decoded)
         clipboard.setText(decoded)
