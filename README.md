@@ -24,5 +24,7 @@ This section will explain the items in the GUI.
 * Encode Button - encodes the text currently in the Input Text Box, using the mode currently selected.
 * Decode Button - decodes the text currently in the Input Text Box, using the mode currently selected.
 
+![Image of GUI](/images/gui.png)
+
 ## Changelog
 Last updated 8/25/2024 by Jason Chen
