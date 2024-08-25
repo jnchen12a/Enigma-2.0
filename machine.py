@@ -124,7 +124,7 @@ class Machine():
         # convert char to number 0-95
         num = ord(char)
         if num < 32 or num > 127:
-            raise CharNotSupported(char)
+            raise CharNotSupported(repr(char))
         
         num -= 32
 
@@ -139,7 +139,7 @@ class Machine():
         # convert char to number 0-95
         num = ord(char)
         if num < 32 or num > 127:
-            raise CharNotSupported(char)
+            raise CharNotSupported(repr(char))
         
         num -= 32
 
