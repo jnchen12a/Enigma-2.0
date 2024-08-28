@@ -1,5 +1,5 @@
 # Enigma 2.0
-Updated version of my previous Encryption-Decryption program. With an improved GUI and special mode! Also written by someone with 2 more years of programming experience, and hopefully the code and GUI reflects that.
+Updated version of my previous Encryption-Decryption program. The same plaintext will encode into different cyphertext each time. With an improved GUI and special mode! Also written by someone with 3 more years of programming experience, hopefully the code and GUI reflects that.
 
 ## Contents
 1. [Set Up](#set-up)
@@ -8,7 +8,7 @@ Updated version of my previous Encryption-Decryption program. With an improved G
 
 ## Set Up
 After cloning this repo locally, create a virtual environment. After activating it, run `pip install -r requirements.txt` to install all necessary packages. <br>
-**NOTE:** this program was developed using Python 3.11.1
+***NOTE:*** this program was developed using Python 3.11.1
 
 ## How to Use
 After activating your virtual environment, run `py ./main_gui.py` <br>
@@ -26,7 +26,7 @@ This section will explain the items in the GUI.
 
 ![Image of GUI](/images/gui_used.png)
 
-If you'd like to see an example of what the "I'm Feeling Goofy" mode outputs, take a look at /images/goofy.png **(SPOILER ALERT!)**.
+If you'd like to see an example of what the "I'm Feeling Goofy" mode outputs, take a look at /images/goofy.png ***(SPOILER ALERT!)***.
 
 ## Changelog
 Last updated 8/28/2024 by Jason Chen
