@@ -26,7 +26,7 @@ This section will explain the items in the GUI.
 
 ![Image of GUI](/images/gui_used.png)
 
-If you'd like to see an example of what the "I'm feeling goofy" mode outputs, take a look at /images/goofy.png.
+If you'd like to see an example of what the "I'm feeling goofy" mode outputs, take a look at /images/goofy.png (SPOILER ALERT!).
 
 ## Changelog
-Last updated 8/25/2024 by Jason Chen
+Last updated 8/28/2024 by Jason Chen
