@@ -1,5 +1,5 @@
 # Enigma 2.0
-Updated version of my previous Encryption-Decryption program. The same plaintext will encode into different cyphertext each time. With an improved GUI and special mode! Also written by someone with 3 more years of programming experience, hopefully the code and GUI reflects that.
+Updated version of my previous Encryption-Decryption program. The same plaintext will encode into different cyphertext each time. With an improved GUI and special mode!
 
 ## Contents
 1. [Set Up](#set-up)
