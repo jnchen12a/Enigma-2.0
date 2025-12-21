@@ -135,9 +135,6 @@ class Ui_Form(object):
     
     def pressEncode(self):
         text = self.inputTextBox.toPlainText()
-        if '\n' in text:
-            text = text.replace('\n', '')
-            self.showInformationDialogue("Newlines not supported by machine, removed from input text")
         if text == '':
             self.showCriticalDialogue("No text to encode!")
             return
