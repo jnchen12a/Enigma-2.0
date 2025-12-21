@@ -182,6 +182,7 @@ class Ui_Form(object):
             resText = ''
             for line in lines:
                 resText += f'{line}\n'
+            resText = resText[:-1]
 
             self.inputTextBox.setText(resText)
 
