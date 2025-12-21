@@ -30,4 +30,4 @@ This section will explain the items in the GUI.
 If you'd like to see an example of what the "I'm Feeling Goofy" mode outputs, take a look at /images/goofy.png ***(SPOILER ALERT!)***.
 
 ## Changelog
-Last updated 12/20/1015 by Jason Chen
+Last updated 12/20/2025 by Jason Chen
