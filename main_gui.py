@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from machine import Machine, InvalidCypherText, CharNotSupported, GoofyException
 import modes
+from pathlib import Path
 
 
 class Ui_Form(object):
@@ -94,6 +95,11 @@ class Ui_Form(object):
         self.submitButtonLayout.addWidget(self.decodeButton)
         self.buttonLayout.addLayout(self.submitButtonLayout)
         self.outerLayout.addLayout(self.buttonLayout)
+        ###
+        self.fileButton = QtWidgets.QPushButton(self.widget)
+        self.fileButton.setObjectName("fileButton")
+        self.fileButton.clicked.connect(self.pressFileButton)
+        self.submitButtonLayout.addWidget(self.encodeButton)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -119,6 +125,7 @@ class Ui_Form(object):
         self.encodeButton.setText(_translate("Form", "Encode"))
         self.decodeButton.setText(_translate("Form", "Decode"))
         self.clearButton.setText(_translate("Form", "Clear Input and Output"))
+        self.fileButton.setText(_translate("Form", "Choose File"))
 
     def setMode(self):
         if self.normalRadioButton.isChecked():
@@ -148,6 +155,9 @@ class Ui_Form(object):
         if text == '':
             self.showCriticalDialogue("No text to decode!")
             return
+        if len(text) <= 3:
+            self.showCriticalDialogue("The input cyphertext is too short! Ensure that it is valid.")
+            return
         try:
             decoded = self.machine.decode(text)
         except InvalidCypherText:
@@ -159,6 +169,21 @@ class Ui_Form(object):
         self.outputTextBox.setText(decoded)
         clipboard.setText(decoded)
         self.showInformationDialogue("Text has successfully been decoded. Result copied to clipboard.")
+
+    def pressFileButton(self):
+        fname, _ = QtWidgets.QFileDialog.getOpenFileName(Form, 'Open file', 'c:\\',"Text files (*.txt)")
+        p = Path(fname)
+        if not p.exists():
+            self.showCriticalDialogue(f'File {fname} does not exist')
+            return
+        
+        with p.open() as f:
+            lines = f.readlines()
+            resText = ''
+            for line in lines:
+                resText += f'{line}\n'
+
+            self.inputTextBox.setText(resText)
 
     def clearButtonPressed(self):
         self.inputTextBox.clear()
