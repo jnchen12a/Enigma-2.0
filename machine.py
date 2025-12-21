@@ -49,7 +49,7 @@ class Machine():
                 else:
                     encodedLetter = chr(n + 32)
             else:
-                encodedLetter = self._numToGoofy(encodedLetter) + " " # GoofyException
+                encodedLetter = self._numToGoofy(n) + " " # GoofyException
             self._shiftWheels()
             res += encodedLetter
         
@@ -113,11 +113,16 @@ class Machine():
                 if word.lower() == "stinky":
                     stinky = word
                     continue
-                n = self._passThroughWheelsDecode(chr(self._goofyToNum(word, stinky) + 32), firstWheel, secondWheel, thirdWheel)
+                n = self._goofyToNum(word, stinky)
+                if n == 96:
+                    inChar = '\n'
+                else:
+                    inChar = chr(n + 32)
+                n = self._passThroughWheelsDecode(inChar, firstWheel, secondWheel, thirdWheel)
                 if n == 96:
                     encodedLetter = '\n'
                 else:
-                    encodedLetter = chr(n)
+                    encodedLetter = chr(n + 32)
                 self._shiftWheels()
                 res += encodedLetter
                 stinky = ""
