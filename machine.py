@@ -13,11 +13,11 @@ class GoofyException(Exception):
 class Machine():
     def __init__(self, mode) -> None:
         # 5 wheels     10
-        self.wheel0 = [10, 69, 56, 23, 4, 1, 17, 82, 96, 36, 71, 20, 53, 51, 12, 74, 95, 5, 34, 41, 8, 27, 7, 67, 15, 61, 80, 59, 33, 3, 28, 52, 72, 92, 94, 81, 47, 91, 29, 84, 58, 31, 16, 79, 19, 25, 44, 48, 18, 54, 93, 62, 76, 0, 89, 2, 66, 32, 87, 77, 39, 46, 37, 57, 86, 42, 14, 35, 73, 26, 22, 64, 45, 90, 9, 75, 38, 21, 68, 85, 70, 43, 78, 55, 13, 30, 65, 63, 49, 50, 11, 6, 24, 88, 40, 60, 83]
-        self.wheel1 = [9, 6, 72, 29, 61, 81, 50, 89, 5, 85, 56, 76, 41, 18, 47, 7, 4, 33, 13, 70, 93, 96, 42, 27, 45, 74, 95, 25, 73, 78, 36, 69, 48, 20, 88, 67, 35, 59, 64, 14, 65, 10, 49, 23, 32, 86, 34, 21, 82, 55, 51, 1, 12, 77, 91, 71, 60, 75, 52, 38, 16, 46, 15, 63, 37, 3, 40, 84, 68, 57, 94, 66, 0, 58, 79, 39, 26, 90, 11, 22, 8, 62, 17, 43, 19, 87, 44, 53, 83, 24, 2, 28, 54, 80, 30, 92, 31]
-        self.wheel2 = [38, 48, 67, 10, 43, 58, 65, 39, 12, 76, 85, 57, 34, 95, 11, 51, 70, 73, 7, 89, 64, 80, 68, 74, 46, 31, 93, 1, 3, 82, 44, 96, 79, 14, 84, 2, 21, 63, 72, 33, 13, 50, 54, 49, 22, 81, 47, 83, 24, 6, 36, 19, 8, 59, 9, 77, 37, 55, 40, 41, 26, 0, 87, 35, 28, 20, 27, 88, 66, 90, 25, 53, 71, 45, 5, 30, 18, 61, 56, 62, 29, 78, 42, 69, 86, 92, 23, 17, 91, 15, 75, 16, 4, 52, 60, 94, 32]
-        self.wheel3 = [21, 1, 3, 32, 5, 45, 23, 0, 13, 92, 39, 7, 76, 9, 27, 60, 94, 72, 46, 50, 15, 87, 64, 70, 53, 96, 31, 8, 67, 20, 10, 30, 63, 83, 34, 69, 80, 75, 19, 42, 28, 4, 81, 12, 57, 78, 86, 91, 29, 51, 43, 73, 65, 88, 33, 2, 6, 41, 24, 59, 52, 22, 36, 93, 54, 37, 68, 16, 66, 47, 38, 61, 11, 62, 49, 90, 48, 35, 17, 71, 85, 56, 55, 84, 58, 25, 74, 82, 18, 79, 40, 77, 26, 44, 95, 89, 14]
-        self.wheel4 = [77, 75, 46, 57, 23, 62, 86, 90, 30, 59, 68, 31, 74, 79, 87, 28, 14, 66, 1, 89, 0, 20, 61, 51, 91, 29, 85, 44, 54, 13, 36, 9, 55, 84, 43, 18, 17, 92, 35, 56, 5, 47, 39, 64, 40, 58, 48, 33, 16, 45, 88, 34, 82, 60, 26, 93, 95, 50, 32, 22, 7, 96, 63, 65, 73, 21, 2, 15, 71, 72, 8, 81, 25, 12, 49, 42, 4, 80, 41, 24, 70, 27, 37, 10, 76, 3, 11, 38, 19, 69, 94, 78, 53, 52, 6, 67, 83]
+        self.wheel0 = [10, 69, 56, 23, 4, 1, 17, 82, 36, 71, 20, 53, 51, 12, 74, 95, 5, 34, 41, 8, 27, 7, 67, 15, 61, 80, 59, 33, 3, 28, 52, 72, 92, 94, 81, 47, 91, 29, 84, 58, 31, 16, 79, 19, 25, 44, 48, 18, 54, 93, 62, 76, 0, 89, 2, 66, 32, 87, 77, 39, 46, 37, 57, 86, 42, 14, 35, 73, 26, 22, 64, 45, 90, 9, 75, 38, 21, 68, 85, 70, 43, 78, 55, 13, 30, 65, 63, 49, 50, 11, 6, 24, 88, 40, 60, 83]
+        self.wheel1 = [9, 6, 72, 29, 61, 81, 50, 89, 5, 85, 56, 76, 41, 18, 47, 7, 4, 33, 13, 70, 93, 42, 27, 45, 74, 95, 25, 73, 78, 36, 69, 48, 20, 88, 67, 35, 59, 64, 14, 65, 10, 49, 23, 32, 86, 34, 21, 82, 55, 51, 1, 12, 77, 91, 71, 60, 75, 52, 38, 16, 46, 15, 63, 37, 3, 40, 84, 68, 57, 94, 66, 0, 58, 79, 39, 26, 90, 11, 22, 8, 62, 17, 43, 19, 87, 44, 53, 83, 24, 2, 28, 54, 80, 30, 92, 31]
+        self.wheel2 = [38, 48, 67, 10, 43, 58, 65, 39, 12, 76, 85, 57, 34, 95, 11, 51, 70, 73, 7, 89, 64, 80, 68, 74, 46, 31, 93, 1, 3, 82, 44, 79, 14, 84, 2, 21, 63, 72, 33, 13, 50, 54, 49, 22, 81, 47, 83, 24, 6, 36, 19, 8, 59, 9, 77, 37, 55, 40, 41, 26, 0, 87, 35, 28, 20, 27, 88, 66, 90, 25, 53, 71, 45, 5, 30, 18, 61, 56, 62, 29, 78, 42, 69, 86, 92, 23, 17, 91, 15, 75, 16, 4, 52, 60, 94, 32]
+        self.wheel3 = [21, 1, 3, 32, 5, 45, 23, 0, 13, 92, 39, 7, 76, 9, 27, 60, 94, 72, 46, 50, 15, 87, 64, 70, 53, 31, 8, 67, 20, 10, 30, 63, 83, 34, 69, 80, 75, 19, 42, 28, 4, 81, 12, 57, 78, 86, 91, 29, 51, 43, 73, 65, 88, 33, 2, 6, 41, 24, 59, 52, 22, 36, 93, 54, 37, 68, 16, 66, 47, 38, 61, 11, 62, 49, 90, 48, 35, 17, 71, 85, 56, 55, 84, 58, 25, 74, 82, 18, 79, 40, 77, 26, 44, 95, 89, 14]
+        self.wheel4 = [77, 75, 46, 57, 23, 62, 86, 90, 30, 59, 68, 31, 74, 79, 87, 28, 14, 66, 1, 89, 0, 20, 61, 51, 91, 29, 85, 44, 54, 13, 36, 9, 55, 84, 43, 18, 17, 92, 35, 56, 5, 47, 39, 64, 40, 58, 48, 33, 16, 45, 88, 34, 82, 60, 26, 93, 95, 50, 32, 22, 7, 63, 65, 73, 21, 2, 15, 71, 72, 8, 81, 25, 12, 49, 42, 4, 80, 41, 24, 70, 27, 37, 10, 76, 3, 11, 38, 19, 69, 94, 78, 53, 52, 6, 67, 83]
         self.allWheels = [self.wheel0, self.wheel1, self.wheel2, self.wheel3, self.wheel4]
 
         if not self._checkWheels():
@@ -44,7 +44,7 @@ class Machine():
         for c in text:
             n = self._passThroughWheelsEncode(c, firstWheel, secondWheel, thirdWheel) # CharNotSupported
             if self.mode == modes.NORMAL:
-                if n == 96: # should be the newline character
+                if n == 95: # should be the newline character
                     encodedLetter = '\n'
                 else:
                     encodedLetter = chr(n + 32)
@@ -100,7 +100,7 @@ class Machine():
         if self.mode == modes.NORMAL:
             for c in message:
                 n = self._passThroughWheelsDecode(c, firstWheel, secondWheel, thirdWheel) # CharNotSupported
-                if n == 96:
+                if n == 95:
                     encodedLetter = '\n'
                 else:
                     encodedLetter = chr(n + 32)
@@ -114,12 +114,12 @@ class Machine():
                     stinky = word
                     continue
                 n = self._goofyToNum(word, stinky)
-                if n == 96:
+                if n == 95:
                     inChar = '\n'
                 else:
                     inChar = chr(n + 32)
                 n = self._passThroughWheelsDecode(inChar, firstWheel, secondWheel, thirdWheel)
-                if n == 96:
+                if n == 95:
                     encodedLetter = '\n'
                 else:
                     encodedLetter = chr(n + 32)
@@ -135,39 +135,39 @@ class Machine():
         self.secondPos = 0
         self.thirdPos = 0
 
-    # scrambles char into range [0, 96]
+    # scrambles char into range [0, 95]
     def _passThroughWheelsEncode(self, char, firstWheel, secondWheel, thirdWheel) -> int:
-        # convert char to number 0-95
+        # convert char to number 0-94
         if char == '\n':
-            num = 96
+            num = 95
         else:
             num = ord(char)
-            if num < 32 or num > 127:
+            if num < 32 or num > 126:
                 raise CharNotSupported(repr(char))
             
             num -= 32
 
         # pass number through wheels
-        forward = thirdWheel[(secondWheel[(firstWheel[(num + self.firstPos) % 97] + self.secondPos) % 97] + self.thirdPos) % 97]
-        backward = firstWheel[(secondWheel[(thirdWheel[(forward + self.thirdPos) % 97] + self.secondPos) % 97] + self.firstPos) % 97]
+        forward = thirdWheel[(secondWheel[(firstWheel[(num + self.firstPos) % 96] + self.secondPos) % 96] + self.thirdPos) % 96]
+        backward = firstWheel[(secondWheel[(thirdWheel[(forward + self.thirdPos) % 96] + self.secondPos) % 96] + self.firstPos) % 96]
 
         return backward
     
-    # decodes char into range [0, 96]
+    # decodes char into range [0, 95]
     def _passThroughWheelsDecode(self, char, firstWheel, secondWheel, thirdWheel) -> int:
         if char == '\n':
-            num = 96
+            num = 95
         else:
-            # convert char to number 0-95
+            # convert char to number 0-94
             num = ord(char)
-            if num < 32 or num > 127:
+            if num < 32 or num > 126:
                 raise CharNotSupported(repr(char))
             
             num -= 32
 
         # pass number through wheels
-        forward = (thirdWheel.index((secondWheel.index((firstWheel.index(num) - self.firstPos) % 97) - self.secondPos) % 97) - self.thirdPos) % 97
-        backward = (firstWheel.index((secondWheel.index((thirdWheel.index(forward) - self.thirdPos) % 97) - self.secondPos) % 97) - self.firstPos) % 97
+        forward = (thirdWheel.index((secondWheel.index((firstWheel.index(num) - self.firstPos) % 96) - self.secondPos) % 96) - self.thirdPos) % 96
+        backward = (firstWheel.index((secondWheel.index((thirdWheel.index(forward) - self.thirdPos) % 96) - self.secondPos) % 96) - self.firstPos) % 96
 
         return backward
 
@@ -192,9 +192,9 @@ class Machine():
     
     def _checkWheels(self) -> bool:
         for wheel in self.allWheels:
-            if len(wheel) != 97:
+            if len(wheel) != 96:
                 return False
-            for num in range(97):
+            for num in range(96):
                 if num not in wheel:
                     return False
         
@@ -203,7 +203,7 @@ class Machine():
     def _translateWheelNum(self, n):
         return n % 96
     
-    # number represented as Goofy, from [0, 96]
+    # number represented as Goofy, from [0, 95]
     def _numToGoofy(self, n) -> str:
         original = n
         # get firstDigit

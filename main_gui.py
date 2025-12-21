@@ -178,6 +178,8 @@ class Ui_Form(object):
 
     def pressFileButton(self):
         fname, _ = QtWidgets.QFileDialog.getOpenFileName(Form, 'Open file', 'c:\\',"Text files (*.txt)")
+        if fname == '':
+            return
         p = Path(fname)
         if not p.exists():
             self.showCriticalDialogue(f'File {fname} does not exist')
@@ -187,8 +189,7 @@ class Ui_Form(object):
             lines = f.readlines()
             resText = ''
             for line in lines:
-                resText += f'{line}\n'
-            resText = resText[:-1]
+                resText += line
 
             self.inputTextBox.setText(resText)
 
