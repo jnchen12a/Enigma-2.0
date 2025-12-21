@@ -23,10 +23,11 @@ This section will explain the items in the GUI.
     * **Note:** When decoding, make sure the correct mode is selected, matching the mode used when encoding the cyphertext. Mode should be evident through cyphertext.
 * Encode Button - encodes the text currently in the Input Text Box, using the mode currently selected.
 * Decode Button - decodes the text currently in the Input Text Box, using the mode currently selected.
+* Choose File Button - allows you to use a text file as input.
 
 ![Image of GUI](/images/gui_used.png)
 
 If you'd like to see an example of what the "I'm Feeling Goofy" mode outputs, take a look at /images/goofy.png ***(SPOILER ALERT!)***.
 
 ## Changelog
-Last updated 8/28/2024 by Jason Chen
+Last updated 12/20/1015 by Jason Chen
