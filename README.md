@@ -4,7 +4,8 @@ Updated version of my previous Encryption-Decryption program. The same plaintext
 ## Contents
 1. [Set Up](#set-up)
 2. [How to Use](#how-to-use)
-3. [Changelog](#changelog)
+3. [Using Command Line Tool](#using-command-line-tool)
+4. [Changelog](#changelog)
 
 ## Set Up
 After cloning this repo locally, create a virtual environment. After activating it, run `pip install -r requirements.txt` to install all necessary packages. <br>
@@ -29,5 +30,14 @@ This section will explain the items in the GUI.
 
 If you'd like to see an example of what the "I'm Feeling Goofy" mode outputs, take a look at /images/goofy.png ***(SPOILER ALERT!)***.
 
+## Using Command Line Tool
+The command line tool can be used to encode/decode files "in place". In other words, a file is read in, processed, and the output overwrites what was originally in the file.
+
+**WARNING: If successful, file contents will be overwritten!**
+
+Run the command line tool with the command `py machine_cmd.py [options]`.
+
+Run `py machine_cmd.py --help` for help with the options.
+
 ## Changelog
-Last updated 12/20/2025 by Jason Chen
+Last updated 12/23/2025 by Jason Chen

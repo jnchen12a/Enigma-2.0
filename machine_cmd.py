@@ -25,7 +25,7 @@ if __name__ == '__main__':
     # intake command line arguments
     # py machine_cmd.py <list of files/folders> -m [n|g]
     parser = argparse.ArgumentParser(description='Input files/folders that you want to be encoded/decoded.')
-    parser.add_argument('paths', nargs='+', help='Directories or files to process.')
+    parser.add_argument('paths', nargs='+', help='Directories or files to process. Currently, for directories, subdirectories will not also be processed.')
     parser.add_argument('-v', '--verbose', action='store_true', help='Toggle the verbosity of the program.')
     parser.add_argument('-m', '--mode', default='n', choices=['n', 'g'], help='Choose the mode to run the machine in, (n)ormal or (g)oofy.')
     parser.add_argument('-o', '--operation', choices=['e', 'd'], required=True, help='Choose whether to (e)ncode or (d)ecode files (required).')
