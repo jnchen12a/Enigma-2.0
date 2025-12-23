@@ -24,7 +24,7 @@ This section will explain the items in the GUI.
     * **Note:** When decoding, make sure the correct mode is selected, matching the mode used when encoding the cyphertext. Mode should be evident through cyphertext.
 * Encode Button - encodes the text currently in the Input Text Box, using the mode currently selected.
 * Decode Button - decodes the text currently in the Input Text Box, using the mode currently selected.
-* Choose File Button - allows you to use a text file as input.
+* Choose File Button - allows you to use a text file as input (will not modify the file contents).
 
 ![Image of GUI](/images/gui_used.png)
 
